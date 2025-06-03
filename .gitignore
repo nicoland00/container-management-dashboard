@@ -1,0 +1,9 @@
+# node modules
+**/node_modules
+
+# builds
+/ui/dist
+/api/dist
+
+# environment
+ui/.env.local
