@@ -9,7 +9,7 @@
 
 ## 1. Estructura resumida de carpetas:
 Divididiendo el root en dos secciones una para api y otra para ui. Un ultimo documento docker-compose.yml para el manejo y definicion de los networks y servicios utilizados.
-
+```bash
 container-management-dashboard/
 ├── api/
 │ ├── src/index.ts # Lógica de endpoints Express en TS
@@ -39,6 +39,7 @@ container-management-dashboard/
 ├── docker-compose.yml # Orquesta api y ui en red "dappnet"
 ├── .gitignore # Ignorar dist, node_modules, .env.local, etc.
 └── README.md # Este documento
+```
 
 Y las imagenes cap1 y cap2.
 
@@ -174,7 +175,7 @@ Para que la API pueda controlar contenedores del host (listar, arrancar, detener
 ```yaml
 volumes:
   - /var/run/docker.sock:/var/run/docker.sock
-
+```
 Esto significa que, dentro del contenedor api, el binario docker apunta al demonio Docker que corre en tu máquina local.
 
 ¡Eso es todo!
