@@ -57,20 +57,27 @@ Y las imagenes cap1 y cap2.
 ## 3. Cómo construir y ejecutar
 
 1. Clona el repositorio:
-   ```bash
+```bash
    git clone https://github.com/nicoland00/container-management-dashboard.git
    cd container-management-dashboard
+```
 
 2. Copia el archivo de ejemplo de variables en ui/:
+```bash
 cd ui
 cp .env.example .env.local
 cd ..
+```
 
 3. Levanta los servicios con Docker Compose:
+```bash
 docker compose up --build -d
+```
 
 4. Verifica el estado:
+```bash
 docker compose ps
+```
 
 Con este comando deberias de ver dos sercicios activos api y ui. 
 
@@ -79,6 +86,8 @@ Con este comando deberias de ver dos sercicios activos api y ui.
 ## 4. Docker Compose (dappnet)
 
 Codigo del archive docker-compose.yml:
+
+```bash
 
 networks:
   dappnet:
@@ -110,6 +119,7 @@ services:
       - dappnet
     depends_on:
       - api
+```
 
 Red dappnet: conecta ambos contenedores en una red interna. La UI, al usar http://api:3000, apunta directamente al contenedor de la API.
 
