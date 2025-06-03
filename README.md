@@ -83,6 +83,9 @@ Con este comando deberias de ver dos sercicios activos api y ui.
 
 5. Accede a el servicio ui desde: http://localhost:5173 
 
+Verás esto:
+> ![Dashboard](images/cap.png)
+
 ## 4. Docker Compose (dappnet)
 
 Codigo del archive docker-compose.yml:
